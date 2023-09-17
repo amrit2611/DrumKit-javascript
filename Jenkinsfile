@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'echo "Deploying..."'
+                sh 'docker run -d -p 80:80 mysite'
             }
         }
     }
